@@ -17,7 +17,7 @@ Concurrency Go Notes
     - Synchronizing memory has performance ramifications 
   * `Deadlocks, Livelocks, Starvations` 
     - Program can stop working all together if none of these properties are satisfied
-    1. Deadlock
+    1. `Deadlock`
       - All concurrent proccesses are waiting on each other to access a resource 
       - Program will never recover without outside intervention
       - In other words go routines infinitly wait on eacho other 
@@ -27,14 +27,14 @@ Concurrency Go Notes
         ii. Wait for Condition
         iii. No Preemption
         iv. Circular Wait
-    2. Livelock 
+    2. `Livelock` 
       - Programs that are actively running concurrent operations; however, the operations do notn move the state of the 
       program
       - Two or more proccesses are attemping to prevent a deadlock without coordination 
       - Livelocks more difficult to spot than deadlocks 
       - Livelocks are part of a larger set of problems known as starvation 
       - All concurrent proccess are starved equally, or no work is accomplished 
-    3. Starvation
+    3. `Starvation`
      - Any situation where concurrent proccesses cannot get all the resources it needs to perfomr work 
      - In livelocks the resource that was starved was a shared lock
      - One or more greedy proccesses that are unfairly preventing one or more concurrent processes from accomplishing work as     efficiently as possible
