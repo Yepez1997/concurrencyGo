@@ -21,7 +21,7 @@ Concurrency Go Notes
       - Program will never recover without outside intervention
       - In other words go routines infinitly wait on eacho other 
       - Few conditions must be met to determaine if a deadlock exists - Edgar Coffman
-       ## Coffman Conditions 
+       #### Coffman Conditions 
         i. Mutual Exclusion
         ii. Wait for Condition
         iii. No Preemption
