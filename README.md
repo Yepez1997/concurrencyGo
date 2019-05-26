@@ -40,4 +40,16 @@ Concurrency Go Notes
      - One or more greedy proccesses that are unfairly preventing one or more concurrent processes from accomplishing work as     efficiently as possible
      - Greedy worker holds on to a shared lock for its entirety whereas polite worker only hold one at a time - or perhaps only when it needs to 
      - Keeping track of metrics is critical to discovering starvation 
+     - Constrain memory access synchronization to critical sections 
+     - Starvation can cause a program to behave inefficiently or incorrectly 
+     - Can happen with outside resources 
+   * `Concurrency Safety`
+      - concurency is a difficult area in computer science 
+      - with go, can more cleary and safely write concurrent algorithms 
+      - go's concurrent, low-latency, garbage collector
+      - no need for a thread pool 
+      - go's concurrency primitives make it easier to compose larger concurrent programs - channels, selectors
 
+## Chapter 2  Modeling Your Code: Communicating Sequential Processes?
+   * `Concurrency vs Parallelism`
+   
