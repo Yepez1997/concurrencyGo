@@ -1,4 +1,4 @@
-# concurrency-go-notes
+# Concurrency Go Notes
 Concurrency Go Notes 
 
 ## Chapter 1 Why Concurrency is Hard ? 
@@ -39,4 +39,5 @@ Concurrency Go Notes
      - In livelocks the resource that was starved was a shared lock
      - One or more greedy proccesses that are unfairly preventing one or more concurrent processes from accomplishing work as     efficiently as possible
      - Greedy worker holds on to a shared lock for its entirety whereas polite worker only hold one at a time - or perhaps only when it needs to 
+     - Keeping track of metrics is critical to discovering starvation 
 
