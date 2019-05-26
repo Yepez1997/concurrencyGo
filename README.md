@@ -17,6 +17,15 @@ Concurrency Go Notes
   * `Deadlocks, Livelocks, Starvations` 
     - Program can stop working all together if none of these properties are satisfied
     1. Deadlock
+      - All concurrent proccesses are waiting on each other to access a resource 
+      - Program will never recover without outside intervention
+      - In other words go routines infinitly wait on eacho other 
+      - Few conditions must be met to determaine if a deadlock exists - Edgar Coffman
+       ## Coffman Conditions 
+        i. Mutual Exclusion
+        ii. Wait for Condition
+        iii. No Preemption
+        iv. Circular Wait
     2. Livelock 
     3. Starvation
 
