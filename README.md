@@ -52,4 +52,10 @@ Concurrency Go Notes
 
 ## Chapter 2  Modeling Your Code: Communicating Sequential Processes?
    * `Concurrency vs Parallelism`
+      - Concurrency is the property of the code, parrallism is the propertyof running the program
+      - Code is not parallel, code is concurrent - in hopes that it will be parallel
+      - Parrallism is a property of runtime 
+      - Go primitives include channels, and go routines 
+    * `Communicating Sequential Processes`
+    
    
