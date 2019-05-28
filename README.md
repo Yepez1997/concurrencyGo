@@ -57,5 +57,8 @@ Concurrency Go Notes
       - Parrallism is a property of runtime 
       - Go primitives include channels, and go routines 
     * `Communicating Sequential Processes`
+      - Tony Hoare paper 1978 
+      - model input and output between processes correctly
+      - go uses the guarded command - invented by Dijkstra 
     
    
