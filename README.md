@@ -61,33 +61,31 @@ Concurrency Go Notes
       - model input and output between processes correctly
       - go uses the guarded command - invented by Dijkstra 
     
- ## Chapter 3  Go's Concurrency Building Blocks 
-      * `Goroutines`
-         -
-      * `Sync Package `
-         -
-      * `Wait Groups`
-      * `Cond`
-      * `Once`
-      * `Pool`
-      * `Channels`
-      * `Queues`
-      * `Select`
-      * `GOMAXPROCSLEVER`
+## Chapter 3  Go's Concurrency Building Blocks 
+   * `Goroutines`
+   * `Sync Package `
+   * `Wait Groups`
+   * `Cond`
+   * `Once`
+   * `Pool`
+   * `Channels`
+   * `Queues`
+   * `Select`
+   * `GOMAXPROCSLEVER`
       
 ## Chapter 4 Concurrency Patterns in Go
-      * 'Confinement`
-      * `For Select`
-      * `Preventing Go Routine Leaks`
-      * `Or Channel`
-      * `Error Handling`
-      * `Pipelines`
-      * `Fan In Fan Out`
-      * `Or Done Channel`
-      * `Tee Channel`
-      * `Bridge Channel`
-      * `Queuing`
-      * `Context Package`
+   * 'Confinement`
+   * `For Select`
+   * `Preventing Go Routine Leaks`
+   * `Or Channel`
+   * `Error Handling`
+   * `Pipelines`
+   * `Fan In Fan Out`
+   * `Or Done Channel`
+   * `Tee Channel`
+   * `Bridge Channel`
+   * `Queuing`
+   * `Context Package`
       
       
       
