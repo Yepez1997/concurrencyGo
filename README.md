@@ -74,7 +74,7 @@ Concurrency Go Notes
    * `GOMAXPROCSLEVER`
       
 ## Chapter 4 Concurrency Patterns in Go
-   * 'Confinement`
+   * `Confinement`
    * `For Select`
    * `Preventing Go Routine Leaks`
    * `Or Channel`
