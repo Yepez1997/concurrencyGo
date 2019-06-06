@@ -10,7 +10,7 @@ import (
 func main() {
 	c := sync.NewCond(&sync.Mutex{}}
 	queue := make([]interface{}, 0, 10)
-
+	// c.Wait is a blocking call 
 	removeFromQueue := func(delay time.Duration) {
 		time.Sleep(delay)
 		c.L.Lock()
