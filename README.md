@@ -61,4 +61,10 @@ Concurrency Go Notes
       - model input and output between processes correctly
       - go uses the guarded command - invented by Dijkstra 
     
-   
+ ## Chapter 3  Go's Concurrency Building Blocks 
+      * `Goroutines`
+      * `Sync Package `
+      * `Wait Groups`
+      * `Pipelining`
+      * `Channels`
+      * `Queues`
