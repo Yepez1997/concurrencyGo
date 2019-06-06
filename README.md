@@ -63,7 +63,9 @@ Concurrency Go Notes
     
  ## Chapter 3  Go's Concurrency Building Blocks 
       * `Goroutines`
+         -
       * `Sync Package `
+         -
       * `Wait Groups`
       * `Cond`
       * `Once`
