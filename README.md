@@ -65,6 +65,27 @@ Concurrency Go Notes
       * `Goroutines`
       * `Sync Package `
       * `Wait Groups`
-      * `Pipelining`
+      * `Cond`
+      * `Once`
+      * `Pool`
       * `Channels`
       * `Queues`
+      * `Select`
+      * `GOMAXPROCSLEVER`
+      
+## Chapter 4 Concurrency Patterns in Go
+      * 'Confinement`
+      * `For Select`
+      * `Preventing Go Routine Leaks`
+      * `Or Channel`
+      * `Error Handling`
+      * `Pipelines`
+      * `Fan In Fan Out`
+      * `Or Done Channel`
+      * `Tee Channel`
+      * `Bridge Channel`
+      * `Queuing`
+      * `Context Package`
+      
+      
+      
