@@ -13,6 +13,7 @@ func main() {
 		},
 	}
 
+	// creates a new instance at first
 	myPool.Get()
 	instance := myPool.Get()
 	myPool.Put(instance)

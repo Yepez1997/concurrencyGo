@@ -10,7 +10,7 @@ func main() {
 	increment := func() {
 		count++
 	}
-
+  
 	var once sync.Once
 
 	var increments sync.WaitGroup
