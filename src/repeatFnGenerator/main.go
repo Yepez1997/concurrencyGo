@@ -1,8 +1,9 @@
 package main
 
 import (
-	"crypto/rand"
 	"fmt"
+	"math/rand"
+	"time"
 )
 
 func main() {
@@ -39,9 +40,10 @@ func main() {
 	}
 
 	done := make(chan interface{})
-	rand := func() interface{} { return rand.Int() }
+	rand.Seed(time.Now().UnixNano())
+	randFn := func() interface{} { return rand.Intn(1000) }
 	defer close(done)
-	for num := range take(done, repeatFn(done, rand), 10) {
-		fmt.Println(num)
+	for num := range take(done, repeatFn(done, randFn), 10) {
+		fmt.Printf("number: %v\n", num)
 	}
 }
