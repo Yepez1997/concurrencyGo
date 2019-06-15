@@ -39,6 +39,8 @@ func main() {
 		return takeStream
 	}
 
+
+	// essentially using this function to convert into a string 
 	toString := func(done <-chan interface{}, valueStream <-chan interface{}) <-chan string {
 		stringStream := make(chan string)
 		go func() {
