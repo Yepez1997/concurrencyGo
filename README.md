@@ -75,16 +75,32 @@ Concurrency Go Notes
       
 ## Chapter 4 Concurrency Patterns in Go
    * `Confinement`
+      - Lexical Confinement 
+      - Ad hoc Confinement
    * `For Select`
    * `Preventing Go Routine Leaks`
    * `Or Channel`
+    - Combine one or more done channels wiht a single channel if any of the n channels passed in closes 
    * `Error Handling`
+    - Should always seperate concerns with logic
    * `Pipelines`
+      - Can be thought of as higher order functions or monads
+      - Batch Proccesing -> opperate on chunks of data at once
+      - Stream Proccesing -> 
+        opperate on a stage that receives one element at time  
    * `Fan In Fan Out`
+    - Proces of starting multiple goroutines to handle input from a pipeline 
+    - Fanning in means multiplexing streams of data into a single stream 
+    - For fan in pattern order should be unimportant 
    * `Or Done Channel`
+    - Checks if a valid channel was returned and not cancelled (revisit this)
    * `Tee Channel`
+    - Used when the values returned from a channel might be sent to different areas of the code base etc etc.
    * `Bridge Channel`
+   - Used when want to retreive values from a sequence of channels
    * `Queuing`
+      - Queing Theory
+      - Little's Law- Predict the throughout of pipeline
    * `Context Package`
       
       

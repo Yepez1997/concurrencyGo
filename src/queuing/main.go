@@ -2,6 +2,8 @@ package main
 
 import "time"
 
+// queing is used to reduce the time in the blocking state
+// decouple stages such that the runtime of one does not affect the runtime of another
 func main() {
 	done := make(chan interface{})
 	defer close(done)
