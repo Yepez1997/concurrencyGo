@@ -134,7 +134,13 @@ Concurrency Go Notes
         - composeable and elegant to manage braches 
         - call graph is asychronous 
       - at each stack frame  a function can affect the entirety of the call below it 
-
+      - use context to store data when it transmites processes and api boundaries 
+      1. data should tarnsmite process or api boundaries 
+      2. data should be immutable 
+      3. data should tend toward simple tyoes 
+      4. data should be data - not types with methods 
+      5. data should help decorate operations - not drive them 
+  ## Chapter 5 Concurrency at Scale
       
 
       
