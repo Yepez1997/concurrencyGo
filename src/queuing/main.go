@@ -15,4 +15,5 @@ func main() {
 	// although the total time remains at 13 seconds
 	long := sleep(done, 4*time.Second, short)
 	pipeline := long
+	// building pipelines in go
 }
