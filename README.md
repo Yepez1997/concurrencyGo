@@ -107,6 +107,28 @@ Concurrency Go Notes
       - may be useful to communicate useful information alongside the simple notification to cancel 
       - very common to wrap in systems of any size 
       - useful to know why the system was cancelled or whether function has a deadline to complete 
+      - context type will flow through the system 
+      - deadline should return the time when the work done on behalf of the context should be cancelled 
+        - returns ok == false when no deadline is set 
+      - done returns a channel thats closed when work done on behalf of this context should be cancelled 
+        - done may return nil if this context could never be cancelled 
+      - err returns a non nil error value after done is closed 
+      - value returns the value associated with this context for key 
+      - done returns a channel thats closed 
+      - deadline to indicate if a go routine was cancelled 
+      - primary uses of go routine was to service requests 
+      - purpose of the value function is so that request specifix information needs to be passed along in addition to information about preemption 
+      - 'main uses of context package' 
+        - to provide an api for canceling branches of your call graph 
+        - to provide a data bag for transporting scoped data through your call graph 
+      - cancelation 
+        - has three aspects 
+          - a go routines parent may want to cancel it 
+          - a go routine may want to cancel its children 
+          - any blocking operations within a goroutine need to be pre emptable so that it may be canceled 
+          - childen cannot cancel context stack 
+
+      
 
       
       
