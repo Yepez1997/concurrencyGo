@@ -102,6 +102,12 @@ Concurrency Go Notes
       - Queing Theory
       - Little's Law- Predict the throughout of pipeline
    * `Context Package`
+      - often neccesary to preempty operations because of time outs,
+      cancellationm or failure of another part of the system. 
+      - may be useful to communicate useful information alongside the simple notification to cancel 
+      - very common to wrap in systems of any size 
+      - useful to know why the system was cancelled or whether function has a deadline to complete 
+
       
       
       
