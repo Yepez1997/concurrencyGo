@@ -127,6 +127,13 @@ Concurrency Go Notes
           - a go routine may want to cancel its children 
           - any blocking operations within a goroutine need to be pre emptable so that it may be canceled 
           - childen cannot cancel context stack 
+      - withCancel 
+      - withDeadline 
+      - withTimeout 
+      - succesive layers can create a context that adheres to their needs 
+        - composeable and elegant to manage braches 
+        - call graph is asychronous 
+      - at each stack frame  a function can affect the entirety of the call below it 
 
       
 
