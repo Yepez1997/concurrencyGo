@@ -1,5 +1,6 @@
 package main
 
+// pool concept on concurrency
 import (
 	"fmt"
 	"sync"

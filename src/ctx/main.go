@@ -1,5 +1,5 @@
 package main
-
+// ctx package code 
 import (
 	"fmt"
 	"sync"
@@ -7,7 +7,6 @@ import (
 )
 
 // with done channel only 
-
 func main() {
 	var wg sync.WaitGroup
 	done := make(chan interface{})
