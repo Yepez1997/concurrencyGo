@@ -15,7 +15,7 @@ func main() {
 		},
 	}
 
-	// seed the pool with 4kb
+	// seed the pool with 4kb of data
 	calcPool.Put(calcPool.New())
 	calcPool.Put(calcPool.New())
 	calcPool.Put(calcPool.New())
@@ -25,6 +25,7 @@ func main() {
 	var wg sync.WaitGroup
 	wg.Add(numWorkers)
 
+	// get the resource from the pool and put the resource back to the pool
 	for i := numWorkers; i > 0; i-- {
 		go func() {
 			defer wg.Done()

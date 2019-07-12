@@ -1,5 +1,5 @@
 package main 
-
+// tee channel - when want to send input to many processes
 func main() {
 	tee := func(done <-chan interface{}, in <-chan interface) (_,_,<-chan interface{}) {
 		out1 := make(chan interface{})

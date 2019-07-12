@@ -2,7 +2,8 @@ package main
 
 import "fmt"
 
-// batch proccessing
+// batch proccessing the inputs are passed in as batches
+// stream processing the inputs are passed in element by element
 func main() {
 	multiply := func(values []int, multiplier int) []int {
 		multipliedValues := make([]int, len(values))

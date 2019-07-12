@@ -22,7 +22,6 @@ func main() {
 
 	take := func(done <-chan interface{}, valueStream <-chan interface{}, num int) <-chan interface{} {
 		takeStream := make(chan interface{})
-
 		go func() {
 			defer close(takeStream)
 			for i := 0; i < num; i++ {
