@@ -16,4 +16,21 @@ func main() {
 	long := sleep(done, 4*time.Second, short)
 	pipeline := long
 	// building pipelines in go
+
+	take := func(done <-chan interface{}, valueStream <-chan interface{}, num int) <-chan interface{} {
+		takeStream := make(chan interface{})
+		go func() {
+			defer close(takeStream)
+			for i := 0; i < num; i++ {
+				select {
+				case <-done:
+					return
+				case takeStream <- <-valueStream:
+				}
+			}
+		}()
+		return takeStream
+
+	}
+
 }
