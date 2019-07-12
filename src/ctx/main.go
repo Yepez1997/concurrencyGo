@@ -14,6 +14,7 @@ func main() {
 	// cloe the chanel when done
 	defer close(done)
 
+	// add wait group to make sure that the concurrent program is finishec
 	wg.Add(1)
 	go func() {
 		defer wg.Done()
