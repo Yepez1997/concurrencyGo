@@ -77,7 +77,7 @@ func eventEmit() {
 			if ok == false {
 				return
 			}
-			fmt.Printf("Results %v\n,", r.Second())
+			fmt.Printf("Results %v\n", r.Second())
 		case <-time.After(timeout):
 			return
 		}
