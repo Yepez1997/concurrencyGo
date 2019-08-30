@@ -72,7 +72,7 @@ func eventEmit() {
 			if ok == false {
 				return
 			}
-			fmt.Println("Pulse ")
+			fmt.Println("Pulse")
 		case r, ok := <-results:
 			if ok == false {
 				return
