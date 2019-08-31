@@ -7,6 +7,8 @@ import (
 	"time"
 )
 
+
+// why and how did this work 
 func main() {
 	// anonymous function
 	doWork := func(
@@ -43,6 +45,7 @@ func main() {
 	wg.Add(10)
 	// start 10 go routines
 	for i := 0; i < 10; i++ {
+		// note these are not run in sequential - ran in parralel
 		go doWork(done, i, &wg, result)
 	}
 	firstReturned := <-result
