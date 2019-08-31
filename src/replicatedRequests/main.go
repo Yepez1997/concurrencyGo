@@ -19,7 +19,6 @@ func main() {
 		defer wg.Done()
 
 		// simulate random load
-
 		simulatedLoadTime := time.Duration(1+rand.Intn(5)) * time.Second
 		select {
 		case <-done:
