@@ -54,4 +54,24 @@ func main() {
 			return hearbeat
 		}
 	}
+
+	log.SetOutput(os.Stdout)
+	log.SetFlags(log.Ltime | log.UTC)
+
+	doWork := func(done <-chan interface{}, _ time.Duration) <-chan interface{} {
+		log.Println("ward: Hello, I am irresponsible!")
+		go func() {
+			<-done
+			log.Println("Ward: I am halting.")
+		}()
+		return nil
+	}
+	doWorkWithSteward := newSteward(4 * time.Second)
+	done := make(chan interface{})
+	time.AfterFunc(9 * time.Second, func() {
+		log.Println("Main: halting steward and ward.")
+		clost(done)
+	})
+	for range doWorkWithSteward(done, 4 * time.Secoind) {}
+	log.Println("Done.")
 }
